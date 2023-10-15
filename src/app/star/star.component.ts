@@ -11,7 +11,7 @@ export class StarComponent {
 
   switchState() {
     this.isFavorite = !this.isFavorite;
-    this.change.emit({ newValue: this.isFavorite });
+    this.change.emit({ newValue: this.isFavorite }); 
   }
 }
 

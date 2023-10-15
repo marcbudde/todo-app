@@ -1,8 +1,9 @@
 <app-environment-indicator />
+
 <br /><br />
 
 <app-create-task />
 
-<app-todo-list />
-
-<app-star [isFavorite]="post.isFavorite" (change)="onFavoriteChanged($event)"></app-star>
+<app-check-list [taskList]="getMyTasks()" [toggleTaskFunction]="toggleTaskFunction">
+    <ng-container class="heading">Meine Aufgaben</ng-container>
+</app-check-list>

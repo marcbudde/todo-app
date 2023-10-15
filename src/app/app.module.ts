@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { TodoListComponent } from './todo-list/todo-list.component';
+import { CheckListComponent } from './check-list/check-list.component';
 import { CreateTaskComponent } from './create-task/create-task.component';
 import { StarComponent } from './star/star.component';
 import { EnvironmentIndicatorComponent } from './environment-indicator/environment-indicator.component';
@@ -11,7 +11,7 @@ import { EnvironmentIndicatorComponent } from './environment-indicator/environme
 @NgModule({
   declarations: [
     AppComponent,
-    TodoListComponent,
+    CheckListComponent,
     CreateTaskComponent,
     StarComponent,
     EnvironmentIndicatorComponent
