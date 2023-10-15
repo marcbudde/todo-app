@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-star',
@@ -6,9 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./star.component.css']
 })
 export class StarComponent {
-  done = false;
+  @Input('isFavorite') isFavorite = false;
+  @Output('change') change = new EventEmitter();
 
   switchState() {
-    this.done = !this.done;
+    this.isFavorite = !this.isFavorite;
+    this.change.emit({ newValue: this.isFavorite });
   }
+}
+
+export interface FavoriteChangedEventArgs {
+  newValue: boolean;
 }
