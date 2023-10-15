@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FavoriteChangedEventArgs } from './star/star.component';
+import { FavoriteChangedEventArgs } from './toggle/toggle.component';
 import { TaskService } from './task.service';
 import { TaskDefinition } from './check-list/check-list.component';
 

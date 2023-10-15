@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { CheckListComponent } from './check-list/check-list.component';
 import { CreateTaskComponent } from './create-task/create-task.component';
-import { StarComponent } from './star/star.component';
+import { ToggleComponent } from './toggle/toggle.component';
 import { EnvironmentIndicatorComponent } from './environment-indicator/environment-indicator.component';
 
 @NgModule({
@@ -13,7 +13,7 @@ import { EnvironmentIndicatorComponent } from './environment-indicator/environme
     AppComponent,
     CheckListComponent,
     CreateTaskComponent,
-    StarComponent,
+    ToggleComponent,
     EnvironmentIndicatorComponent
   ],
   imports: [

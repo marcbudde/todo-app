@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { FavoriteChangedEventArgs } from '../star/star.component';
+import { FavoriteChangedEventArgs } from '../toggle/toggle.component';
 
 @Component({
   selector: 'app-check-list',

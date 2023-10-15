@@ -6,7 +6,7 @@
   <ul class="list-group list-group-flush">
     <li class="list-group-item d-flex justify-content-between align-items-center" *ngFor="let task of taskList">
       {{ task.name }}
-      <app-star [isFavorite]="task.completed" (change)="toggleTaskFunction(task, $event)" />
+      <app-toggle [isToggleOn]="task.completed" [toggleOnClass]="'bi-check2-square'" [toggleOffClass]="'bi-square'" (change)="toggleTaskFunction(task, $event)" />
     </li>
   </ul>
 </div>
