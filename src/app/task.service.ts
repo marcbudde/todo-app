@@ -18,4 +18,8 @@ export class TaskService {
     task.completed = !task.completed;
     console.log('Zu speichernder Zustand:', task);
   }
+
+  addTask(taskName: string) {
+    this.tasks.push({ name: taskName, completed: false });
+  }
 }

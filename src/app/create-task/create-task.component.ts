@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TaskService } from '../task.service';
 
 @Component({
   selector: 'app-create-task',
@@ -6,10 +7,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./create-task.component.css']
 })
 export class CreateTaskComponent {
-  taskName = 'my@domain.com';
+  taskName = '';
   isSaveActive = false;
+
+  constructor(private taskService: TaskService) {}
 
   onKeyUp() {
     console.log('Task Name eingegeben: ' + this.taskName)
+  }
+
+  addTask() {
+    this.taskService.addTask(this.taskName);
   }
 }
