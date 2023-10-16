@@ -1,5 +1,6 @@
 stages:
   - dependencies
+  - build_and_test
 
 install:
   stage: dependencies
@@ -8,6 +9,43 @@ install:
   cache:
     key:
       files:
-        - package.json
+        - package-lock.json
     paths:
       - node_modules
+  only:
+    refs:
+      - merge_requests
+    changes:
+      - package-lock.json
+
+build_app:
+  stage: build_and_test
+  tags:
+    - docker
+  script:
+    - yarn ng build --prod
+  after_script:
+    - cp $PROJECT_PATH/Dockerfile $APP_OUTPUT_PATH
+  artifacts:
+    name: "angular-app-pipeline"
+    paths:
+      - dist/awesome-app
+  cache:
+    key:
+      files:
+        - package-lock.json
+    paths:
+      - node_modules
+    policy: pull
+
+
+
+
+
+#  cache:
+#    key:
+#      files:
+#        - yarn.lock
+#    paths:
+#      - node_modules
+#    policy: pull
