@@ -15,11 +15,7 @@ install:
         - package-lock.json
     paths:
       - node_modules
-  only:
-    refs:
-      - merge_requests
-    changes:
-      - package-lock.json
+
 
 build_app:
   stage: build_and_test
