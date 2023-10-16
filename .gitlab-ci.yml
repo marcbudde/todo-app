@@ -1,0 +1,13 @@
+stages:
+  - dependencies
+
+install:
+  stage: dependencies
+  script:
+    - npm install --prefer-offline
+  cache:
+    key:
+      files:
+        - package.json
+    paths:
+      - node_modules
