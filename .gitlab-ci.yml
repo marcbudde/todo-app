@@ -24,7 +24,7 @@ install:
 build_app:
   stage: build_and_test
   script:
-    - npm run ng build --prod
+    - npm run ng build --configuration=production
   artifacts:
     name: "angular-app-pipeline"
     paths:
