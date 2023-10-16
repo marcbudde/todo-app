@@ -20,12 +20,8 @@ install:
 
 build_app:
   stage: build_and_test
-  tags:
-    - docker
   script:
-    - yarn ng build --prod
-  after_script:
-    - cp $PROJECT_PATH/Dockerfile $APP_OUTPUT_PATH
+    - ./ng build --prod
   artifacts:
     name: "angular-app-pipeline"
     paths:
