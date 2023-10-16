@@ -23,10 +23,9 @@ install:
 
 build_app:
   stage: build_and_test
-  needs: ["install"]
   script:
-    - chmod +x ng
-    - ./ng build --prod
+    - chmod +x node_modules/.bin/ng
+    - node_modules/.bin/ng build --prod
   artifacts:
     name: "angular-app-pipeline"
     paths:
@@ -38,15 +37,3 @@ build_app:
     paths:
       - node_modules
     policy: pull
-
-
-
-
-
-#  cache:
-#    key:
-#      files:
-#        - yarn.lock
-#    paths:
-#      - node_modules
-#    policy: pull
