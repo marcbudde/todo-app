@@ -26,7 +26,7 @@ build_app:
   script:
     - npm run ng build --configuration=production
   artifacts:
-    name: "angular-app-pipeline"
+    name: "awesome-app"
     paths:
       - dist/awesome-app
   cache:
