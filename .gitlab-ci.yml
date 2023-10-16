@@ -22,6 +22,7 @@ install:
       - package-lock.json
 
 build_app:
+  needs: ["install"]
   stage: build_and_test
   script:
     - chmod +x ng
