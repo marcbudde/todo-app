@@ -1,9 +1,15 @@
 import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import { FormsModule } from '@angular/forms';
+import { EnvironmentIndicatorComponent } from './environment-indicator/environment-indicator.component';
+import { CreateTaskComponent } from './create-task/create-task.component';
+import { CheckListComponent } from './check-list/check-list.component';
+import { ToggleComponent } from './toggle/toggle.component';
 
 describe('AppComponent', () => {
   beforeEach(() => TestBed.configureTestingModule({
-    declarations: [AppComponent]
+    imports: [FormsModule],
+    declarations: [AppComponent, EnvironmentIndicatorComponent, CreateTaskComponent, CheckListComponent, ToggleComponent]
   }));
 
   it('should create the app', () => {
