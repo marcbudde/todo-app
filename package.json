@@ -49,6 +49,5 @@
   },
   "main": "index.js",
   "repository": "git@gitlab.it.nrw.de:itaz_kurse/konzept-der-continuous-integration-konzci/awesome-app.git",
-  "author": "Budde, Marc-Andre <marcandre.budde@it.nrw.de>",
   "license": "MIT"
 }
